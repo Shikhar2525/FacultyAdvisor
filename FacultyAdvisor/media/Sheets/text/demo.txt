@@ -2,12 +2,18 @@ Shri Vaishnav Vidyapeeth Vishwavidyalaya
             Department of Information Technology            
 NOTICE
 Time:11:00-12:00
-Date: 2019-09-06
-Available list of Faculties (7)
-(1) Mr. Jitendra Sharma
-(2) Ms. Priyanka Gupta
-(3) Mr. Shrikant Telang
-(4) Mr. Gaurav Vinchurkar
-(5) Mr. Abhishek Kori
-(6) Mrs. Ruchika Dubey
-(7) Mrs. Reena Patidar
+Date: 2019-09-07
+Available list of Faculties (13)
+(1) Mr. Jayesh Surana
+(2) Mr. Sachin Yele
+(3) Mr. Dinesh Patel
+(4) Mr. Gaurav Shrivastava
+(5) Mr. Shrikant Telang
+(6) Mr. Manoj Dhawan
+(7) Mr. Rupesh Nagendra
+(8) Mr. Rahul Aanjana
+(9) Mr. Manish Kumar
+(10) Mr.Anshul Gupta
+(11) Ms. Anshulika Bhawsar
+(12) Mrs. Ruchika Dubey
+(13) Mrs. Reena Patidar

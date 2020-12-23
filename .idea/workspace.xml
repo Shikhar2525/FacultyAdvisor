@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="76dd551f-5143-4f1c-b607-1d4e4f107e43" name="Default Changelist" comment="" />
+    <list default="true" id="76dd551f-5143-4f1c-b607-1d4e4f107e43" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FacultyAdvisor/Advisor/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/FacultyAdvisor/Advisor/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FacultyAdvisor/Advisor/templates/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/FacultyAdvisor/Advisor/templates/result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FacultyAdvisor/Advisor/templates/upload_sheet.html" beforeDir="false" afterPath="$PROJECT_DIR$/FacultyAdvisor/Advisor/templates/upload_sheet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FacultyAdvisor/FacultyAdvisor/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/FacultyAdvisor/FacultyAdvisor/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FacultyAdvisor/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/FacultyAdvisor/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FacultyAdvisor/media/Sheets/text/demo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/FacultyAdvisor/media/Sheets/text/demo.txt" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,10 +25,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1koqgzaKcDXAqWD5L3SGxEFBFXh" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../faculty" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -53,5 +66,16 @@
       <updated>1606377406815</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
