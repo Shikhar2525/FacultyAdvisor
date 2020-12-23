@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faculty Duty</title>
+    {% load static %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'duty/bootstrap.css' %}">
+    <script type="text/javascript" src="{% static 'duty/jquery-3.4.1.js' %}"></script>
+    <style>
+        body{
+            background-color: whites;
+        }
+        .btn{
+            background-color: #F69719;
+            font-color: white;
+            text-decoration: none;
+            font-family: Courier;
+        }
+
+        ul{
+            list-style-type: none;
+        }
+        ul#menu li{
+            float: left;
+            display: inline;
+        }
+        .button1 {
+          background-color: #ddd;
+          border: none;
+          color: black;
+          padding: 10px 20px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          margin: 4px;
+          cursor: pointer;
+          border-radius: 16px;
+        }
+
+        .button:hover {
+          background-color: #f1f1f1;
+          }
+
+          #sticky-footer {
+              flex-shrink: none;
+            }
+
+            .wrapper {
+                min-height: 100%;
+                display: grid;
+                grid-template-rows: auto 1fr auto;
+         }
+
+
+                .form-container {
+                  padding: 5%;
+                  background: #ffffff;
+                  /*border: 9px solid #f2f2f2;*/
+                  max-width: 520px;
+                  margin: auto;
+                }
+
+            }
+
+             p
+            {
+              text-align: center;
+            }
+
+            input, textarea
+            {
+              width: 100%;
+            }
+            textarea
+            {
+              height: 200px;
+            }
+
+
+
+
+
+    </style>
+
+    <script>
+
+     </script>
+
+</head>
+<body>
+        <nav class="navbar navbar-light " style="background-color: #1D74B9;margin:10px;">
+
+          <img class="" src="{% static 'duty/images/logo.jpg' %}" height="50px" width="50px" style="float:left;border:1px solid;">
+           <a class="navbar-brand" style="margin-left:250px;color:white;font-family:Courier;">Faculty Advisor</a>
+          <form class="form-inline" method="get" id="target" >
+            <input class="form-control mr-sm-2 search" style="" type="search" placeholder="Search Faculty" aria-label="Search">
+                <button class="btn button my-2 my-sm-0" type="submit" >Search</button>
+              </form>
+            </nav>
+
+    <hr class="container">
+             <div class="alert alert-info alert-dismissible container">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Info!</strong> Please upload Structured Sheet (Alloted By Examination Department)
+              </div>
+
+
+
+            <hr class="container">
+
+
+        </div>
+
+        <center><h3 style="margin-bottom:-30px;margin-left:-260px;">
+          Fill Details<br>
+          <small style="margin-left:140px;" class="text-muted">Examination Date and Time</small>
+        </h3></center><br>
+
+         <div class="container">
+            <div class="form-container">
+                <form method="post" action="/FacultyAdvisor/get_sheet" enctype="multipart/form-data">{% csrf_token %}
+
+                    <div class="input-group mb-3">
+                        <input class="form-control" type="date"  id="example-date-input" name="date_h" required>
+                      </div>
+
+
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Select Timing</label>
+                      </div>
+                      <select class="custom-select" id="inputGroupSelect01" name="time_h" required>
+                        <option value="9:00-10:00">9:00-10:00</option>
+                        <option value="11:00-12:00">11:00-12:00</option>
+                        <option value="2:00-3:00">2:00-3:00</option>
+                          <option value="4:00-5:00">4:00-5:00</option>
+                      </select>
+                    </div>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                      </div>
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputGroupFile01"
+                          aria-describedby="inputGroupFileAddon01" name="sheet" accept=".xlsx" required>
+                        <label class="custom-file-label" for="inputGroupFile01" >Select xlsx file only</label>
+                      </div>
+                    </div>
+
+                    <button class="btn  button-primary" type="submit" style="width:100%;margin-top:1rem; ">Post</button>
+                </form>
+            </div>
+        </div>
+<hr class="container" >
+
+
+
+
+
+
+
+<!--    <div class="container-fluid footer1" style="width:auto;height:100px;background-color:yellow;margin-left:10px;margin-right:10px;align:bottom;">-->
+
+
+<!--    </div>-->
+
+
+
+</body>
+
+
+
+
+</html>
+

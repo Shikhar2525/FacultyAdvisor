@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faculty Duty</title>
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'duty/bootstrap.css' %}">
+    <script type="text/javascript" src="{% static 'duty/jquery-3.4.1.js' %}"></script>
+    <style>
+        body{
+            background-color: whites;
+        }
+        .btn{
+            background-color: #F69719;
+            font-color: white;
+            text-decoration: none;
+            font-family: Courier;
+        }
+
+        ul{
+            list-style-type: none;
+        }
+        ul#menu li{
+            float: left;
+            display: inline;
+        }
+        .button1 {
+          background-color: #ddd;
+          border: none;
+          color: black;
+          padding: 10px 20px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          margin: 4px;
+          cursor: pointer;
+          border-radius: 16px;
+        }
+
+        .button:hover {
+          background-color: #f1f1f1;
+          }
+
+          #sticky-footer {
+              flex-shrink: none;
+            }
+
+            .wrapper {
+                min-height: 100%;
+                display: grid;
+                grid-template-rows: auto 1fr auto;
+         }
+
+
+                .form-container {
+                  padding: 5%;
+                  background: #ffffff;
+                  /*border: 9px solid #f2f2f2;*/
+                  max-width: 520px;
+                  margin: auto;
+                }
+
+            }
+
+             p
+            {
+              text-align: center;
+            }
+
+            input, textarea
+            {
+              width: 100%;
+            }
+            textarea
+            {
+              height: 200px;
+            }
+
+
+
+
+
+    </style>
+
+    <script>
+
+     </script>
+
+</head>
+<body>
+        <nav class="navbar navbar-light " style="background-color: #1D74B9;margin:10px;">
+
+          <img class="" src="{% static 'duty/images/logo.jpg' %}" height="50px" width="50px" style="float:left;border:1px solid;">
+          <a class="navbar-brand" style="margin-left:250px;color:white;font-family:Courier;">Faculty Advisor</a>
+          <form class="form-inline" method="get" id="target" >
+            <input class="form-control mr-sm-2 search" style="" type="search" placeholder="Search Faculty" aria-label="Search">
+            <button class="btn button my-2 my-sm-0" type="submit" >Search</button>
+          </form>
+        </nav>
+
+
+
+
+
+
+        {% if found %}
+        <hr class="container">
+        {% if num > 1 %}
+        <center><h1 >{{ c }} Results Found</h1></center>
+        {% else %}
+         <center><h1 >{{ c }} Result Found</h1></center>
+        {% endif %}
+        <hr class="container">
+
+        <a href="/FacultyAdvisor/create_pdf" download> <button type="submit" class="container-fluid btn btn-success" style="width:200px;margin-left:90px;">Generate Report</button>
+        </a>
+        <hr class="container">
+        {% for i in list1%}
+       <div class="card container" style="float:left;width: 18rem;display:inline-block;margin-top:20px;margin-left:30px;height:20rem;margin-right:15px;">
+           <center> <img class="card-img-top" src="{% static 'Advisor/images/download.png' %}" style="margin-top:20 q 7o;,
+            px;width:100px;" alt="Card image cap"></center>
+          <div class="card-body">
+            <center><h5 class="card-title">{{ i }}</h5><center><br>
+          <h6 class="card-subtitle mb-2 text-muted">Available {{ date1 }} {{ time1 }}</h6>
+          </div>
+        </div>
+
+        {% endfor %}
+        {% else %}
+            <div class="alert alert-danger container" role="alert">
+                Entered value does not match with sheet details <a href="/FacultyAdvisor/upload_sheet">Go Back</a>
+            </div>
+        {% endif %}
+
+
+
+
+
+
+
+
+<!--    <div class="container-fluid footer1" style="width:auto;height:100px;background-color:yellow;margin-left:10px;margin-right:10px;align:bottom;">-->
+
+
+<!--    </div>-->
+
+
+
+</body>
+
+
+
+
+</html>
+

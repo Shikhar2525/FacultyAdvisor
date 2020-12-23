@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faculty Duty</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'duty/bootstrap.css' %}">
+    <script type="text/javascript" src="{% static 'duty/jquery-3.4.1.js' %}"></script>
+    <style>
+        body{
+            background-color: whites;
+        }
+        .btn{
+            background-color: #F69719;
+            font-color: white;
+            text-decoration: none;
+            font-family: Courier;
+        }
+
+        ul{
+            list-style-type: none;
+        }
+        ul#menu li{
+            float: left;
+            display: inline;
+        }
+        .button {
+          background-color: #ddd;
+          border: none;
+          color: black;
+          padding: 10px 20px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          margin: 4px;
+          cursor: pointer;
+          border-radius: 16px;
+        }
+
+        .button:hover {
+          background-color: #f1f1f1;
+          }
+
+          #sticky-footer {
+              flex-shrink: none;
+            }
+
+            .wrapper {
+                min-height: 100%;
+                display: grid;
+                grid-template-rows: auto 1fr auto;
+         }
+
+
+                .form-container {
+                  padding: 5%;
+                  background: #ffffff;
+                  /*border: 9px solid #f2f2f2;*/
+                  max-width: 520px;
+                  margin: auto;
+                }
+
+            }
+
+             p
+            {
+              text-align: center;
+            }
+
+            input, textarea
+            {
+              width: 100%;
+            }
+            textarea
+            {
+              height: 200px;
+            }
+
+
+
+
+
+    </style>
+
+    <script>
+
+     </script>
+
+</head>
+<body>
+        <nav class="navbar navbar-light " style="background-color: #1D74B9;margin:10px;">
+
+          <img class="" src="{% static 'duty/images/logo.jpg' %}" height="50px" width="50px" style="float:left;border:1px solid;">
+          <a class="navbar-brand" style="color:white;font-family:Courier;">Faculty Advisor</a>
+          <form class="form-inline" method="get" id="target">
+            <input class="form-control mr-sm-2 search" style="" type="search" placeholder="Search Faculty" aria-label="Search" name="name1">
+            <button class="btn my-2 my-sm-0" type="submit" >Search</button>
+          </form>
+        </nav>
+
+
+
+
+
+        <div class="container-fluid alert alert-dark login" style="height:35px;width:auto;margin-left:12px;margin-right:12px;">
+                <p style="float:right;margin-top:-6px;">
+                    {% if user.is_authenticated %}
+                    <font color="blue">{{ uname }} </font> / <a href="/accounts/logout" style="color:red" > Logout </a>
+                    {% else %}
+                        <a href="/accounts/register">Register </a> /
+                        <a href="/accounts/login">User Login </a> /
+                        <a href="">Admin Login </a>
+                    {% endif %}
+                </p>
+        </div>
+
+        {% if log_stat == 1%}
+            <div class="alert alert-success container" role="alert" style="width:700px;text-align:center;">
+                    Welcome ! {{ fname }}
+            </div>
+        {% else %}
+
+        {% endif %}
+        {% if namev == None%}
+            <div class="" role="alert" style="width:700px;text-align:center;">
+
+                </div>
+        {% elif count > 0 %}
+        <div class="container-fluid">
+                <hr>
+                <div class="alert alert-success container" role="alert" style="width:700px;text-align:center;">
+                  {{ count }} results found.
+                </div>
+                <hr>
+            {% elif count == 0 %}
+            <div class="container-fluid">
+            <hr>
+                <div class="alert alert-danger container" role="alert" style="width:700px;text-align:center;" >
+                  No records found !
+                </div>
+            <hr>
+            </div>
+            {% endif%}
+
+
+        </div>
+
+
+         <div class="container">
+            <div class="form-container">
+                <form method="post">   {% csrf_token %}
+                    <label>Time Slot</label>
+                     <select class="form-control" id="sel1" name="time" required>
+                        <option selected>Timings</option>
+                         <option>8:00-9:00</option>
+                        <option>9:00-10:00</option>
+                        <option>10:00-11:00</option>
+                        <option>11:00-12:00</option>
+                      </select>
+
+                     <label>Day</label>
+                        <select class="form-control" id="sel1" name="day" required>
+                        <option selected>None</option>
+                         <option>Monday</option>
+                        <option>Tuesday</option>
+                        <option>Wednesday</option>
+                        <option>Thursday</option>
+                            <option>Friday</option>
+                            <option>Saturday</option>
+                      </select>
+
+                      <label>Date</label>
+                    <input class="form-control" type="date" name="Email">
+
+                    <button class="btn button-primary" type="submit" style="width:100%;margin-top:1rem; ">Post</button>
+                </form>
+            </div>
+        </div>
+
+
+    <div class="main_bg container">
+
+
+
+        <!--
+          <ul id="menu">
+            <div align="center"   >
+            {% for value in obj1 %}
+                <li style="margin:10px;">
+                    <div class="card" style="width: 13.5rem;margin:10px;">
+                      <img class="card-img-top" src="/media/{{ value.image }}" alt="Card image cap" style="height:200px;width:100%;">
+                      <div class="card-body">
+                          <h5 class="card-title">Faculty Name</h5>
+                        <p class="card-text">{{ value.first_name }} {{ value.last_name }}</p><hr>
+                          <h5 class="card-title" style="font-size:12.5px;" align="left">Available Timings</h5>
+                          <button class="button" style="font-size:12px">8:00-10:00</button>
+                          <button class="button" style="font-size:12px">1:00-2:00</button><hr>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                    </div>
+                </li>
+            {% endfor %}
+            </div>
+            </ul>
+        --!>
+
+        <ul id="menu">
+            <div align="center"   >
+            {% for value in obj2 %}
+                <li style="margin:10px;">
+                    <div class="card" style="width: 13.5rem;margin:10px;">
+                      <img class="card-img-top" src="/media/{{ value.image }}" alt="Card image cap" style="height:200px;width:100%;">
+                      <div class="card-body">
+                          <h5 class="card-title">Faculty Name</h5>
+                        <p class="card-text">{{ value.first_name }} {{ value.last_name }}</p><hr>
+                          <h5 class="card-title" style="font-size:12.5px;" align="left">Available Timings</h5>
+                          <button class="button" style="font-size:12px;width:7rem;">{{ value.Available_Timing }}</button>
+                          <p>{{ value.color }}</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                    </div>
+                </li>
+            {% endfor %}
+            </div>
+            </ul>
+    </div>
+
+<!--    <div class="container-fluid footer1" style="width:auto;height:100px;background-color:yellow;margin-left:10px;margin-right:10px;align:bottom;">-->
+
+
+<!--    </div>-->
+
+
+
+</body>
+
+
+
+
+</html>
